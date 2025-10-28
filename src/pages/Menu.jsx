@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DishCard from "./DishCard";
+import DishCard from "../components/DishCard";
 
 function Menu() {
   const [dishes, setDishes] = useState([]);
