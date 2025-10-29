@@ -1,28 +1,27 @@
 import React from 'react';
-import dishcard from './DishCard.css';
-import { useMenu } from '../context/MenuContext';
+import { useMenu } from '../contexts/MenuContext';
 
 function DishCard({ dish, context }) {
-    const { toogleFavourite, tooglecart } = useMenu();
+    const { toggleFavourite, toggleCart } = useMenu();
 
     const renderButtons = () => {
         switch (context) {
             case "menu":
                 return (
                     <>
-                        <button className="cart btn" onClick={() => tooglecart (dish)}>
+                        <button className="cart btn" onClick={() => toggleCart (dish)}>
                             Add to Cart </button>
-                        <button className="favourite btn" onClick={() => toogleFavourite(dish)}>
+                        <button className="favourite btn" onClick={() => toggleFavourite(dish)}>
                             Add to Favourites</button>
                     </>
                 );
             case "cart":
                 return (
-                    <button className="remove btn" onClick={() => tooglecart(dish)}>
+                    <button className="remove btn" onClick={() => toggleCart(dish)}>
                         Remove from Cart</button>);
             case "favourites":
                 return (
-                    <button className="remove btn" onClick={() => toogleFavourite(dish)}>
+                    <button className="remove btn" onClick={() => toggleFavourite(dish)}>
                         Remove from Favourites </button>);
             default:
                 return null;
