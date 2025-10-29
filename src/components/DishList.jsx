@@ -1,6 +1,5 @@
 import React from "react";
 import DishCard from "./DishCard";
-import "./DishList.css";
 
 function DishList({ meals, cart, favourites, onCartToggle, onFavouriteToggle }) {
   if (!meals || meals.length === 0) {
