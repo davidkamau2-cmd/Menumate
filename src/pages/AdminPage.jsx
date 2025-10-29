@@ -7,7 +7,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
-import "./AdminPage.css"; // ✅ Link to your CSS file
+import "./AdminPage.css";
 
 function AdminPage() {
   const [menuItems, setMenuItems] = useState([]);
