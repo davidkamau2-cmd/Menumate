@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { useAuth } from "../contexts/AuthProvider"; 
 
 function Signup() {
+  const { signup } = useAuth();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email || !password || !confirmPassword) {
@@ -21,9 +23,12 @@ function Signup() {
       return;
     }
 
-    alert("Signup successful!");
-    localStorage.setItem("email", email);
-    navigate("/menu");
+    try {await signup(email, password);
+      await signup(email, password);
+      navigate("/menu");
+    } catch (err) {
+      setError("Error creating account");
+    }
   };
 
   return (
