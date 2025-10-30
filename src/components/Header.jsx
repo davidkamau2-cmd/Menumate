@@ -4,16 +4,16 @@ import { useAuth } from "../contexts/AuthProvider";
 export default function Header() {
   const { user, logout } = useAuth();
   return (
-    <header>
-      <h1>MenuMate</h1>
-      <div>
+    <header  className="bg-gray-100 p-4 flex justify-between items-center shadow">
+      <h1 className="text-xl font-bold text-gray-800">MenuMate</h1>
+      <div className="flex items-center gap-3">
         {user ? (
           <>
-            <span>{user.displayName || user.email}</span>
+            <span className="text-gray-700">{user.displayName || user.email}</span>
             <button onClick={() => logout()}>Sign out</button>
           </>
         ) : (
-          <span>Not signed in</span>
+          <span className="text-gray-500">Not signed in</span>
         )}
       </div>
     </header>

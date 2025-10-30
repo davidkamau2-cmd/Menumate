@@ -7,13 +7,13 @@ function Navbar() {
   const { cart, favourites } = useMenu() || {}; 
 
   return (
-    <nav className="navbar">
-      <h1>MenuMate</h1>
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/menu">Menu</Link>
-        <Link to="/cart">Cart ({cart?.length || 0})</Link>
-        <Link to="/favourites">Favourites ({favourites?.length || 0})</Link>
+    <nav className="bg-white shadow px-4 py-3 flex justify-between items-center sticky top-0 z-50">
+      <h1 className="text-xl font-bold text-blue-600">MenuMate</h1>
+      <div className="flex gap-4 text-sm font-medium">
+        <Link className="hover:text-blue-500" to="/">Home</Link>
+        <Link className="hover:text-blue-500" to="/menu">Menu</Link>
+        <Link className="hover:text-blue-500" to="/cart">Cart ({cart?.length || 0})</Link>
+        <Link className="hover:text-blue-500" to="/favourites">Favourites ({favourites?.length || 0})</Link>
       </div>
     </nav>
   );

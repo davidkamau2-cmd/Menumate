@@ -10,8 +10,10 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
+   <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
+
+      <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-6">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
@@ -20,7 +22,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
-    </>
+    </main>
+    </div>
   );
 }
 

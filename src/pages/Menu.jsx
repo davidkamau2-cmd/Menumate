@@ -19,9 +19,9 @@ function Menu() {
     }, []);
 
   return (
-    <div className ="menu-container"> 
-     <h2>Menu</h2>
-     <div className="dish-grid">
+    <div className="min-h-screen bg-gray-50 px-4 py-6"> 
+     <h2 className="text-2xl font-bold mb-4 text-center">Menu</h2>
+     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {dishes.map((dish) => (
             <DishCard key={dish.id} dish={dish} context="menu" />
           ))}

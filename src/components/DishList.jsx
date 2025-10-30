@@ -3,11 +3,11 @@ import DishCard from "./DishCard";
 
 function DishList({ meals, cart, favourites, onCartToggle, onFavouriteToggle }) {
   if (!meals || meals.length === 0) {
-    return <p className="no-meals">No meals found.</p>;
+    return <p className="text-center text-gray-500 text-lg mt-6">No meals found.</p>;
   }
 
   return (
-    <div className="dish-grid">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
       {meals.map((meal) => (
         <DishCard
           key={meal.idMeal}

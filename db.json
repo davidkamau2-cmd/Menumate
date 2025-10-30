@@ -1,0 +1,94 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Cheeseburger",
+      "price": 450,
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni Pizza",
+      "price": 950,
+      "image": "https://images.unsplash.com/photo-1601924582971-dbb8bde2a5d1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Fried Chicken",
+      "price": 700,
+      "image": "https://images.unsplash.com/photo-1606755962773-0c3f9f3e263b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 4,
+      "name": "French Fries",
+      "price": 250,
+      "image": "https://images.unsplash.com/photo-1550450003-94aef5c27b35?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Hot Dog",
+      "price": 400,
+      "image": "https://images.unsplash.com/photo-1562967916-eb82221dfb36?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 6,
+      "name": "Chicken Nuggets",
+      "price": 500,
+      "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 7,
+      "name": "Taco",
+      "price": 350,
+      "image": "https://images.unsplash.com/photo-1601924757220-6c9f7a6d17f8?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 8,
+      "name": "Donut",
+      "price": 180,
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 9,
+      "name": "Ice Cream",
+      "price": 250,
+      "image": "https://images.unsplash.com/photo-1589710758770-13be5f27cdb4?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 10,
+      "name": "Sub Sandwich",
+      "price": 600,
+      "image": "https://images.unsplash.com/photo-1565958011705-44e211e1e4ec?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 11,
+      "name": "Pancakes",
+      "price": 500,
+      "image": "https://images.unsplash.com/photo-1587731549411-1e104c66f1c0?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 12,
+      "name": "Milkshake",
+      "price": 350,
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 13,
+      "name": "Onion Rings",
+      "price": 300,
+      "image": "https://images.unsplash.com/photo-1606755962372-05046e8d0d4b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 14,
+      "name": "BBQ Ribs",
+      "price": 950,
+      "image": "https://images.unsplash.com/photo-1604908177522-0409be7dcd91?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 15,
+      "name": "Wrap",
+      "price": 550,
+      "image": "https://images.unsplash.com/photo-1612874742624-029a7d6b20be?auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}
