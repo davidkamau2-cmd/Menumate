@@ -24,7 +24,7 @@ function Navbar() {
       </div>
       <div>
       {user ? (
-          <button onClick={logout} className="bg-red-500 text-white px-3 py-1 rounded">
+          <button onClick={handlelogout} className="bg-red-500 text-white px-3 py-1 rounded">
             Sign Out
           </button>
         ) : (
