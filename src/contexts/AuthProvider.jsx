@@ -27,16 +27,11 @@ export function AuthProvider({ children }) {
     return unsubscribe;
   }, []);
 
-  const value = {
-    user,
-    loading,
-    signInWithGoogle: () => signInWithGooglePopup(),
-    signInWithGithub: () => signInWithGithubPopup(),
-    signInWithEmail: (email, pw) => signInWithEmail(email, pw),
-    signUpWithEmail: (email, pw) => signUpWithEmail(email, pw),
-    logout: () => logout(),
-    sendResetEmail: (email) => sendResetEmail(email)
-  };
+ signup(email, password)
+loginWithEmail(email, password)
+logout()
+resetPassword(email)
+
 
   return (
     <AuthContext.Provider value={value}>

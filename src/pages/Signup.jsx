@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthProvider"; 
 
 function Signup() {
-  const { signup } = useAuth();
+  const { signUpWithEmail } = useAuth();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,6 +12,7 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
 
     if (!email || !password || !confirmPassword) {
       setError("All fields are required.");
@@ -24,7 +25,7 @@ function Signup() {
     }
 
   try {
-    await signup(email, password);
+    await signUpWithEmail(email, password);
     navigate("/menu");
   } catch (err) {
     setError("Error creating account. Try again.");
