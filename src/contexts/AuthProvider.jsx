@@ -18,28 +18,36 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Watch Firebase auth state
   useEffect(() => {
     const unsubscribe = onAuthChange((firebaseUser) => {
       setUser(firebaseUser);
       setLoading(false);
+
+      if (firebaseUser?.email) {
+        localStorage.setItem("currentUser", firebaseUser.email);
+      } else {
+        localStorage.removeItem("currentUser");
+      }
     });
 
     return unsubscribe;
   }, []);
 
-  // ✅ Auth functions connected to Firebase
   const signup = (email, password) => signUpWithEmail(email, password);
-  const loginWithEmail = (email, password) => signInWithEmail(email, password);
+  const login = (email, password) => signInWithEmail(email, password);   // ✅ fixed name
   const loginWithGoogle = () => signInWithGooglePopup();
   const loginWithGithub = () => signInWithGithubPopup();
   const resetPassword = (email) => sendResetEmail(email);
-  const signout = () => logout();
+
+  const signout = async () => {
+    await logout();
+    localStorage.removeItem("currentUser");  // ✅ clear on signout
+  };
 
   const value = {
     user,
     signup,
-    loginWithEmail,
+    login,
     loginWithGoogle,
     loginWithGithub,
     resetPassword,
@@ -56,12 +64,3 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
-useEffect(() => {
-  const unsubscribe = onAuthChange((firebaseUser) => {
-    console.log("🔥 Firebase user:", firebaseUser);
-    setUser(firebaseUser);
-    setLoading(false);
-  });
-
-  return unsubscribe;
-}, []);
