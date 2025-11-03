@@ -19,19 +19,14 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthChange((firebaseUser) => {
-      setUser(firebaseUser);
-      setLoading(false);
+  const unsubscribe = onAuthChange((firebaseUser) => {
+    console.log("🔥 Firebase:", firebaseUser);
+    setUser(firebaseUser);
+    setLoading(false);
+  });
+  return unsubscribe;
+}, []);
 
-      if (firebaseUser?.email) {
-        localStorage.setItem("currentUser", firebaseUser.email);
-      } else {
-        localStorage.removeItem("currentUser");
-      }
-    });
-
-    return unsubscribe;
-  }, []);
 
   const signup = (email, password) => signUpWithEmail(email, password);
   const login = (email, password) => signInWithEmail(email, password);   // ✅ fixed name

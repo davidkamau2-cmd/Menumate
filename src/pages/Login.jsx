@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthProvider";
 
 function Login() {
-  const { login } = useAuth();
+  const { loginWithEmail } = useAuth();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,8 +18,8 @@ function Login() {
     }
 
     try {
-      await login(email, password);
-      navigate("/menu");              
+    await loginWithEmail(email, password);
+navigate("/menu");             
     } catch (err) {
       setError("Invalid credentials");
     }

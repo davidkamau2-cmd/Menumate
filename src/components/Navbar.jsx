@@ -11,6 +11,8 @@ function Navbar() {
 
       <div className="flex items-center gap-4">
 
+console.log("Navbar user:", user);
+
         {user && (
           <>
             <Link to="/menu" className="hover:underline">Menu</Link>
