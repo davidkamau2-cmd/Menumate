@@ -10,7 +10,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     await logout();
-    navigate("/");
+    navigate("/login");
   };
 
   return (
@@ -24,7 +24,7 @@ function Navbar() {
       </div>
       <div>
       {user ? (
-          <button onClick={handlelogout} className="bg-red-500 text-white px-3 py-1 rounded">
+          <button onClick={handleLogout} className="bg-red-500 text-white px-3 py-1 rounded">
             Sign Out
           </button>
         ) : (
