@@ -56,3 +56,12 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+useEffect(() => {
+  const unsubscribe = onAuthChange((firebaseUser) => {
+    console.log("🔥 Firebase user:", firebaseUser);
+    setUser(firebaseUser);
+    setLoading(false);
+  });
+
+  return unsubscribe;
+}, []);
